@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Films</title>
+</head>
+<header>
+    <div class="post">
+    <h1>Films and series recommended by others!</h1>
+    </div>
+</header>
+<body style="background-color: #8f3741">
+
+        {% for i in data %}<div class="post">
+    <div class="divv">
+        <h2>{{i.name}}</h2>
+    </div>
+    <div class="divv">
+        <h4>Year : {{i.year}}</h4>
+    </div>
+    <div class="divv">
+        <h4>Director : {{i.director}}</h4>
+    </div>
+    <div class="divv">
+        <h4>URL:</h4>
+        <a href="{{i.url}}">{{i.url}}</a>
+    </div>
+        </div>
+        {% endfor %}
+
+</body>
+<style>
+    .post {
+        background-color: #9F5255;
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .divv {
+        background-color: #7C444F;
+        padding: 10px;
+        padding-left: 50px;
+        border-radius:25px;
+    }
+    h1 {
+        color: white;
+        font-family: cursive;
+        text-align: center;
+    }
+    h2 {
+        color: white;
+        font-family: cursive;
+    }
+    h4 {
+        color: white;
+        font-family: cursive;
+    }
+    a {
+        color: lightskyblue;
+        font-family: cursive;
+    }
+
+</style>
+
+</html>
